@@ -1,0 +1,679 @@
+/*============================================================
+	Theme Name: Docy
+	Version: 1.0
+	Autor: 
+	Description: 
+    Tags: responsive, onepage template, corporate, slider
+==============================================================*/
+
+/*	Table of content  */
+
+/*-------------------------
+	 1. Google Fonts
+	 2. Reset CSS
+	 3. Common CSS
+	 4. Header CSS
+        4.1 - Mobile Menu 
+     5. Breadcrumb Section 
+	 6. Docy FAQ Slider 
+        6.1 - Slick Slider Margin
+        6.2 - FAQ Slider Arrow
+        6.3 -  Docy FAQ Slider Main
+	 7. FAQ Slider Modal/Popup 
+        7.1 - Modal Social Toolbar
+--------------------------*/
+
+/* 1. Google Fonts 
+===================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+/* 2. Reset CSS 
+====================*/
+
+img {
+    width: 100%;
+}
+
+input:focus, button:focus {
+    outline: 0;
+}
+
+/* 3. Common CSS 
+====================*/
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* 4. Header CSS 
+=====================*/
+
+header.main-header {
+    background: transparent;
+    position: absolute;
+    width: 100%;
+}
+
+.main-header nav.navbar {
+    padding: 0;
+}
+
+.main-header nav.navbar .navbar-nav li a {
+    color: #1D3846;
+    font-size: 16px;
+    padding: 0;
+    padding: 10px 20px;
+}
+
+.main-header nav.navbar .navbar-nav li a.active {
+    color: #007CBA;
+}
+
+.main-header nav.navbar .navbar-nav li a {
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.main-header nav.navbar .navbar-nav li a:hover {
+    color: #007CBA;
+}
+
+.menu-right-button ul li a {
+    background: #007CBA;
+    color: #fff;
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.menu-right-button ul {
+    margin: 0;
+    padding: 0;
+    margin-left: 40px;
+}
+
+.menu-right-button ul li a:after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 0px;
+    background: #222831;
+    top: 0;
+    left: 0;
+    border-radius: 5px 50px 50px 5px;
+    z-index: -1;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.menu-right-button ul li a:hover:after {
+    width: 100%;
+    border-radius: 5px;
+}
+
+header.main-header {
+    padding: 20px 0;
+}
+
+/* 4.1 - Mobile Menu */
+
+.main-header .navbar-toggler {
+    background: #007CBA;
+    padding: 2px 10px!important;
+    -webkit-box-shadow: 0px 10px 30px 0px rgba(0, 124, 186, 0.20);
+            box-shadow: 0px 10px 30px 0px rgba(0, 124, 186, 0.20);
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.main-header .menu-btn {
+    vertical-align: middle;
+}
+
+.main-header .menu-btn .line {
+    width: 25px;
+    height: 2px;
+    background-color: #ffffff;
+    display: block;
+    margin: 7px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.main-header .menu-btn.is-active {
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition-delay: 0.6s;
+    -o-transition-delay: 0.6s;
+    transition-delay: 0.6s;
+    -webkit-transform: rotate( 45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.main-header .menu-btn.is-active .line:nth-child(1) {
+    -webkit-transform: translateY(9px);
+    -ms-transform: translateY(9px);
+    transform: translateY(9px);
+}
+
+.main-header .menu-btn.is-active .line:nth-child(1), .main-header .menu-btn.is-active .line:nth-child(3) {
+    -webkit-transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+
+.main-header .menu-btn.is-active .line:nth-child(2) {
+    width: 0;
+}
+
+.main-header .menu-btn.is-active .line:nth-child(3) {
+    -webkit-transform: translateY(-9px) rotate( 90deg);
+    -ms-transform: translateY(-9px) rotate(90deg);
+    transform: translateY(-9px) rotate(90deg);
+}
+
+/* 5. Breadcrumb Section 
+========================*/
+
+.section-breadcrumb{
+    padding-top: 200px;
+    padding-bottom: 98px;
+}
+.section-breadcrumb {
+    background: #FFFAF2;
+}
+
+.breadcrumb-content h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #1D3846;
+}
+
+.breadcrumb-content .breadcrumb {
+    background: transparent;
+    padding: 0;
+}
+
+.breadcrumb-content .breadcrumb li a, 
+.breadcrumb-content .breadcrumb li:before {
+    color: #6B707F;
+}
+
+.breadcrumb-content .breadcrumb li.active {
+    color: #1D3846;
+}
+
+.breadcrumb-content .breadcrumb li a {
+    text-decoration: none;
+}
+
+/* 6. Docy FAQ Slider 
+========================*/
+
+/* 6.1 - Slick Slider Margin */
+
+.slick-slide:focus {
+    outline: 0;
+}
+
+.docy-faq-videos-slider .slick-slide {
+    margin: 0 20px;
+}
+
+.docy-faq-videos-slider .slick-list {
+    margin: 0 -20px;
+}
+
+/* FAQ Slider Margin End */
+
+/* 6.2 - FAQ Slider Arrow */
+
+.docy-faq-videos-slider button.slick-arrow:before, .faq-slider-modal button.slick-arrow:before {
+    display: none;
+}
+
+.docy-faq-videos-slider button.slick-arrow i, .faq-slider-modal button.slick-arrow i {
+    font-size: 24px;
+    height: 40px;
+    width: 40px;
+    background: #fff;
+    -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    color: #1D3846;
+    line-height: 40px;
+    display: inline-block;
+}
+
+.faq-slider-modal button.slick-arrow i {
+    background-color: #BBBDBF;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    font-size: 30px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+
+.faq-slider-modal .slider-nav button.slick-arrow i {
+    background-color: rgba(34, 37, 38, 0.9);
+    color: #fff;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+}
+
+.docy-faq-videos-slider button.slick-arrow, .faq-slider-modal button.slick-arrow {
+    height: auto;
+    width: auto;
+    z-index: 2;
+}
+
+/* FAQ Slider Arrow End */
+
+/* 6.3 - Docy FAQ Slider Main  */
+
+.docy-single-video-content {
+    position: relative;
+}
+
+.section-padding {
+    padding: 120px 0;
+}
+
+.single-faq-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    z-index: 2;
+    padding: 18px 15px;
+    text-align: center;
+}
+
+.video-play-btn {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+}
+
+.video-play-btn a:focus {
+    outline: 0;
+}
+
+.video-play-btn i {
+    color: #007CBA;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    background: #fff;
+    line-height: 40px;
+    border-radius: 50px;
+    font-size: 12px;
+}
+
+.docy-single-video-content:after {
+    position: absolute;
+    content: "";
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(29, 56, 70, 0)), to(rgba(29, 56, 70, 0.8)));
+    background: -o-linear-gradient(top, rgba(29, 56, 70, 0) 0%, rgba(29, 56, 70, 0.8) 100%);
+    background: linear-gradient(180deg, rgba(29, 56, 70, 0) 0%, rgba(29, 56, 70, 0.8) 100%);
+    height: 50%;
+    width: 100%;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    border-radius: 0 0 5px 5px;
+}
+
+.faq-video-title p {
+    color: #fff;
+    font-weight: 500;
+    font-size: 15px;
+    margin: 0;
+}
+
+/* 7. FAQ Slider Modal/Popup */
+
+.faq-slider-modal .modal-dialog {
+    max-width: 100%;
+    margin: 30px;
+    margin-left: 50px;
+}
+
+.faq-slider-modal .modal-content {
+    overflow: hidden;
+}
+
+.faq-modal-main-slider .docy-single-faq-videos {
+    margin: 0 15px;
+}
+
+.faq-slider-modal .modal-header {
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    z-index: 5;
+}
+
+.faq-slider-modal .modal-header button i {
+    padding: 0;
+    background: #41484C;
+    color: #fff;
+    opacity: 1;
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    font-size: 22px;
+    display: inline-block;
+    line-height: 36px;
+}
+
+.faq-slider-modal .modal-header button {
+    padding: 0;
+    opacity: 1;
+    margin: 0;
+}
+
+.faq-slider-modal .modal-content {
+    background: #565B60;
+    border: 0;
+    border-radius: 0;
+}
+
+.faq-slider-modal .modal-header {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.faq-slider-modal .modal-content {
+    padding-top: 40px;
+    padding-bottom: 60px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 5px;
+}
+
+.faq-slider-modal .modal-content .docy-single-faq-videos {
+    -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+            transform: scale(0.8);
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.faq-slider-modal .modal-content .docy-single-faq-videos.slick-center {
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+}
+
+.faq-slider-modal .modal-content .docy-single-faq-videos .faq-video-title p {
+    font-size: 18px;
+}
+
+.faq-slider-modal .modal-content .docy-single-faq-videos .video-play-btn, .faq-slider-modal .modal-content .docy-single-faq-videos .single-faq-overlay, .faq-slider-modal .modal-content .docy-single-faq-videos .video-play-btn {
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.faq-slider-modal .modal-content .docy-single-faq-videos .video-play-btn {
+    position: relative;
+    bottom: -50px;
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
+}
+
+.faq-slider-modal .modal-content .docy-single-faq-videos {
+    -webkit-filter: blur(3px);
+            filter: blur(3px);
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.faq-slider-modal .modal-content .docy-single-faq-videos .video-play-btn i {
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    font-size: 20px;
+}
+
+.faq-slider-modal .modal-content .docy-single-faq-videos .faq-video-title p, .faq-slider-modal .modal-content .docy-single-faq-videos .video-play-btn {
+    opacity: 0;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.faq-slider-modal .modal-content .docy-single-faq-videos.slick-center .video-play-btn {
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+}
+
+.faq-slider-modal .modal-content .docy-single-faq-videos.slick-center p, .faq-slider-modal .modal-content .docy-single-faq-videos.slick-center .video-play-btn {
+    opacity: 1;
+}
+
+.faq-slider-modal .modal-content .docy-single-faq-videos.slick-center {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+}
+
+.faq-modal-main-slider .slick-active.nextdiv {
+    -webkit-filter: blur(8px);
+            filter: blur(8px);
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.faq-modal-main-slider .docy-single-faq-videos.slick-slide.prevdiv.slick-active {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+}
+
+.faq-modal-main-slider .docy-single-faq-videos.slick-slide.prevdiv.slick-active .docy-single-video-content:after {
+    height: 100%;
+    background: rgba(107, 112, 127, 0.5);
+    -webkit-transition: 0.1s;
+    -o-transition: 0.1s;
+    transition: 0.1s;
+}
+
+.faq-slider-modal .docy-single-video-content {
+    height: 470px;
+}
+
+.faq-slider-modal .docy-single-video-content img {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 5px;
+}
+
+.slider-nav p {
+    margin: 0 15px;
+    background: #393D40;
+    color: #fff;
+    font-size: 16px;
+    line-height: 27px;
+    padding: 12px 25px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.slider-navigation-bar-wrapper {
+    margin-top: 60px;
+}
+
+.slider-nav p {
+    opacity: 0.5;
+}
+
+.slider-nav p.slick-center {
+    opacity: 1;
+}
+
+.slide-navbar-heading p {
+    color: #C2C6CC;
+    font-size: 18px;
+}
+
+.slider-nav .slick-list {
+    margin-left: -83px;
+    margin-right: -90px;
+}
+
+/* 7.1 - Modal Social Toolbar */
+
+#icon-toolbox {
+    margin-right: 30px;
+    position: relative;
+}
+
+.social-icon-toolbar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #41484D;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    margin-left: -40px;
+    z-index: 1;
+    cursor: pointer;
+    line-height: 40px;
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+ul.social-icon-list {
+    position: absolute;
+    right: 0;
+    top: 0px;
+    width: 180px;
+}
+
+.social-icon-toolbar, .icons {
+    -webkit-transition: -webkit-all 1s cubic-bezier(.87, -.41, .19, 1.44);
+    -webkit-transition: all 1s cubic-bezier(.87, -.41, .19, 1.44);
+    -o-transition: all 1s cubic-bezier(.87, -.41, .19, 1.44);
+    transition: all 1s cubic-bezier(.87, -.41, .19, 1.44);
+}
+
+.social-icon-toolbar:after {
+    content: "+";
+}
+
+.social-icon-toolbar {
+    -webkit-transform: rotate( 45deg);
+    -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+}
+
+.social-icon-toolbar.active {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+}
+
+.social-icon-list {
+    width: 100%;
+}
+
+.social-icon-list.social-icon-close {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    right: 0px;
+}
+
+.social-icon-list.social-icon-close li {
+    display: none;
+}
+
+ul.social-icon-list {
+    margin: 0;
+    padding: 0;
+    height: 40px;
+    background: rgba(65, 72, 77, 0.6);
+    mix-blend-mode: multiply;
+    -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    list-style: none;
+    overflow: hidden;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+ul.social-icon-list li {
+    display: inline-block;
+}
+
+ul.social-icon-list li a {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.5);
+    display: block;
+}
+
+ul.social-icon-list li a {
+    padding: 8px 20px 5px 0;
+    text-decoration: none;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+ul.social-icon-list {
+    padding-left: 20px;
+}
+
+ul.social-icon-list li a:hover {
+    color: #fff;
+}
